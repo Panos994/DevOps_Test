@@ -1,0 +1,17 @@
+    - name: "debug appdir"
+      ansible.builtin.debug:
+        msg: "appdir {{ansible_user_dir}}"
+              
+    - name: "Clone the Spring repository"
+      git:
+        repo: "https://github.com/VasileiosKokki/FarmerCompensation_University.git"
+        dest: "{{ appdir }}"
+        version: "{{ branch }}"
+        force: yes
+                
+      
+    - name: Run docker-compose up --build
+      command: docker-compose up --build
+      args:
+        chdir: "{{ appdir }}"
+
