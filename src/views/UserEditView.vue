@@ -37,10 +37,10 @@ const onSubmit = async () => {
 
   try {
     await performRequest();
-      alert(data.value);
-      if(status.value === 200){
-        router.push({ name: 'users' }); // Επανακατεύθυνση στο "users" view μετά την επιτυχημένη επεξεργασία.
-      }
+    alert(data.value);
+    if(status.value === 200){
+      router.push({ name: 'users' }); // Επανακατεύθυνση στο "users" view μετά την επιτυχημένη επεξεργασία.
+    }
   } catch (error) {
     console.error('Error editing user:', error); // Εμφάνιση μηνύματος σφάλματος στην περίπτωση αποτυχίας.
   }
@@ -69,7 +69,7 @@ const onSubmit = async () => {
         </tbody>
       </table>
       <button class="btn btn-primary" type="submit">Save Changes</button>
-        <router-link :to="{ name: 'users' }" class="btn btn-secondary">Cancel</router-link>
+      <router-link :to="{ name: 'users' }" class="btn btn-secondary">Cancel</router-link>
     </form>
   </div>
 </template>

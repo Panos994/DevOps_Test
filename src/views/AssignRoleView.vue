@@ -13,7 +13,7 @@ const urlRef = ref(`/api/user/role/${userId.value}/${roleId.value}`);
 const authRef = ref(true);
 const methodRef = ref("POST");
 
-console.log('userId:', userId.value); 
+console.log('userId:', userId.value);
 
 const { data, performRequest } = useRemoteData(urlRef, authRef, methodRef);
 

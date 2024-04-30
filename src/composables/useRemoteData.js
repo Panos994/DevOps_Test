@@ -33,33 +33,33 @@ export function useRemoteData(urlRef, authRef, methodRef = ref("GET"), bodyRef =
         return fetch(urlRef.value, config)
             .then((response) => {
                 // if (response.ok) {
-                    // Handle different methods accordingly
-                    switch (methodRef.value) {
-                        case 'GET':
-                        case 'POST':
-                        case 'PUT':
-                        case 'DELETE':
+                // Handle different methods accordingly
+                switch (methodRef.value) {
+                    case 'GET':
+                    case 'POST':
+                    case 'PUT':
+                    case 'DELETE':
 
-                            contentType = response.headers.get('Content-Type');
+                        contentType = response.headers.get('Content-Type');
 
-                            // Αν υπάρχει στο header το application/json τότε χειριζόμαστε το response που δεχόμαστε από το backend σαν json, αλλιώς σαν text.
-                            if (contentType && contentType.includes('application/json')) {
-                                return response.json().then((responseData) => {
+                        // Αν υπάρχει στο header το application/json τότε χειριζόμαστε το response που δεχόμαστε από το backend σαν json, αλλιώς σαν text.
+                        if (contentType && contentType.includes('application/json')) {
+                            return response.json().then((responseData) => {
+                                data.value = responseData;
+                                status.value = response.status;
+                            });
+                        } else {
+                            return response.text().then((responseData) => {
+                                if (responseData != null) {
                                     data.value = responseData;
                                     status.value = response.status;
-                                });
-                            } else {
-                                return response.text().then((responseData) => {
-                                    if (responseData != null) {
-                                        data.value = responseData;
-                                        status.value = response.status;
-                                    }
-                                });
-                            }
+                                }
+                            });
+                        }
 
-                        default:
-                            break;
-                    }
+                    default:
+                        break;
+                }
                 // } else {
                 //     throw new Error(`Request failed with status: ${response.status}`);
                 // }

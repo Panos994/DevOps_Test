@@ -30,7 +30,7 @@ onMounted(() => {
               <tr>
                 <th>Id</th>
                 <th>Username</th>
-<!--                <th>Password</th>-->
+                <!--                <th>Password</th>-->
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Phone</th>
@@ -43,7 +43,7 @@ onMounted(() => {
               <tr v-for="user in data" :key="user.id">
                 <td>{{ user.id }}</td>
                 <td>{{ user.username }}</td>
-<!--                <td>{{ user.password }}</td>-->
+                <!--                <td>{{ user.password }}</td>-->
                 <td>{{ user.firstName }}</td>
                 <td>{{ user.lastName }}</td>
                 <td>{{ user.phone }}</td>

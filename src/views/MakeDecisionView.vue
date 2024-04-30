@@ -18,17 +18,17 @@ console.log('applicationId:', applicationId.value);
 const { data, performRequest } = useRemoteData(urlRef, authRef, methodRef);
 
 onMounted(() => {
-    performRequest();
+  performRequest();
 });
 </script>
 
 <template>
   <!--Δημιουργία ενός alert που ενημερώνει τον χρήστη ότι το application ελέχθηκε και ένα κουμπί για μετάβαση πίσω στο "Applications" view.-->
-    <div>
-        <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading">Success!</h4>
-            <p class="mb-0">{{ data }}!</p>
-        </div>
-        <router-link :to="{ name: 'applications' }" class="btn btn-primary">Back to Applications</router-link>
+  <div>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Success!</h4>
+      <p class="mb-0">{{ data }}!</p>
     </div>
+    <router-link :to="{ name: 'applications' }" class="btn btn-primary">Back to Applications</router-link>
+  </div>
 </template>

@@ -28,10 +28,10 @@ const { data, status, performRequest } = useRemoteData(urlRef, authRef, methodRe
 const onSubmit = async () => {
   try {
     await performRequest();
-      alert(data.value);
-      if (status.value === 200){
-          router.push({ name: 'users' });
-      }
+    alert(data.value);
+    if (status.value === 200){
+      router.push({ name: 'users' });
+    }
   } catch (error) {
     console.error('Error adding user:', error);
   }
