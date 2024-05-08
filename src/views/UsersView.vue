@@ -52,7 +52,7 @@ onMounted(() => {
                 <td>{{ user.address }}</td>
                 <td>
                   <div class="btn-group">
-                    <router-link v-if="user.id" :to="{ name: 'edit-user', params: { id: user.id, phone: user.phone, email: user.email, address: user.address, data: data } }" class="btn btn-primary">Edit</router-link>
+                    <router-link  :to="{ name: 'edit-user', params: { id: user.id, phone: user.phone, email: user.email, address: user.address, data: data } }" class="btn btn-primary">Edit</router-link>
                     <router-link :to="{ name: 'delete-user', params: { id: user.id } }" class="btn btn-danger">Delete</router-link>
                   </div>
                   <div class="mt-2">
