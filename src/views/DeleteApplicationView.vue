@@ -8,7 +8,7 @@ import { useRemoteData } from '@/composables/useRemoteData.js';
 
 const applicationId = useRoute().params.id;
 const router = useRouter(); // Access the router instance
-const urlRef = ref(`/api/application/${applicationId}`);
+const urlRef = ref(`/api/api/application/${applicationId}`);
 const authRef = ref(true);
 const methodRef = ref("DELETE");
 

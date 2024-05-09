@@ -9,7 +9,7 @@ import { useRemoteData } from '@/composables/useRemoteData.js';
 const route = useRoute();
 const userId = ref(route.params.id);
 const roleId = ref(route.params.roleId);
-const urlRef = ref(`/api/user/role/${userId.value}/${roleId.value}`);
+const urlRef = ref(`/api/api/user/role/${userId.value}/${roleId.value}`);
 const authRef = ref(true);
 const methodRef = ref("POST");
 

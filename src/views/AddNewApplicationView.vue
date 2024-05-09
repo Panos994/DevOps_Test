@@ -20,7 +20,7 @@ const formDataRef = ref({
   "latitude": ""
 });
 const { userData } = useApplicationStore();
-const urlRef = ref(`/api/application/new/${userData.id}`);
+const urlRef = ref(`/api/api/application/new/${userData.id}`);
 const authRef = ref(true);
 const methodRef = ref("POST");
 

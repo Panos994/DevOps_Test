@@ -9,7 +9,7 @@ import { useRemoteData } from '@/composables/useRemoteData.js';
 
 const route = useRoute();
 const applicationId = ref(route.params.id);
-const urlRef = ref(`/api/application/makeDecision/${applicationId.value}`);
+const urlRef = ref(`/api/api/application/makeDecision/${applicationId.value}`);
 const authRef = ref(true);
 const methodRef = ref("POST");
 

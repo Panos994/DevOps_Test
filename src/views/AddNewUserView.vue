@@ -19,7 +19,7 @@ const formDataRef = ref({
   "address": ""
 });
 
-const urlRef = ref(`/api/user/new`);
+const urlRef = ref(`/api/api/user/new`);
 const authRef = ref(true);
 const methodRef = ref("POST");
 

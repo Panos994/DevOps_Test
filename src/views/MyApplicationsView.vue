@@ -7,7 +7,7 @@ import { useApplicationStore } from '@/stores/application.js';
 
 const { userData } = useApplicationStore();
 // const route = useRoute();
-const urlRef = ref(`/api/application/user/${userData.id}`);
+const urlRef = ref(`/api/api/application/user/${userData.id}`);
 const authRef = ref(true);
 const { data, performRequest } = useRemoteData(urlRef, authRef);
 
