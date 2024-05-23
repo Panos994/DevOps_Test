@@ -67,9 +67,33 @@
           force: yes
 
 
+    - name: "Check if .env.example exists"
+      stat:
+        path: "{{ frontendappdir }}/.env.example"
+      register: env_example_stat
+
+    - name: "Print .env.example existence status"
+      debug:
+        msg: "File .env.example exists: {{ env_example_stat.stat.exists }}"
+
+    - name: "List files in frontend directory for debugging"
+      command: ls -l "{{ frontendappdir }}"
+      register: frontend_dir_listing
+      changed_when: false
+
+    - name: "Print frontend directory listing"
+      debug:
+        var: frontend_dir_listing.stdout_lines
+
+
+
+
+
+
 
     - name: copy env file
       shell : "cp {{frontendappdir}}/.env.example {{frontendappdir}}/.env"
+      when: env_example_stat.stat.exists
 
 
     - name: populate  ~/.env
