@@ -3,7 +3,7 @@
 
   vars:
       frontendappdir: "{{ ansible_user_dir }}/frontend"
-      branch: "test-frontend"
+      branch: "devops-frontend"
       site_location: /var/www/vue
 
   pre_tasks:
@@ -61,7 +61,7 @@
   tasks:
     - name: "Clone the Vue repository"
       git:
-          repo: "https://github.com/Panos994/DevOps_Test.git"
+          repo: "https://github.com/VasileiosKokki/FarmerCompensation_University.git"
           dest: "{{ frontendappdir }}"
           version: "{{ branch }}"
           force: yes
