@@ -66,8 +66,18 @@
           version: "{{ branch }}"
           force: yes
 
+
+
+
+
+    - name: "Check if .env.example exists"
+      stat:
+        path: "{{ frontendappdir }}/.env.example"
+      register: env_example_stat
+
     - name: copy env file
       shell : "cp {{frontendappdir}}/.env.example {{frontendappdir}}/.env"
+      when: env_example_stat.stat.exists
 
     - name: populate  ~/.env
       lineinfile:
