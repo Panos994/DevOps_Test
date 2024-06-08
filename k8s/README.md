@@ -22,14 +22,14 @@ create docker login secret
     create a .dockerconfigjson file, like this
 
 {
-"auths": {
-"https://ghcr.io":{
-"username":"REGISTRY_USERNAME",
-"password":"REGISTRY_TOKEN",
-"email":"REGISTRY_EMAIL",
-"auth":"BASE_64_BASIC_AUTH_CREDENTIALS"
-}
-}
+    "auths": {
+        "https://ghcr.io":{
+            "username":"REGISTRY_USERNAME",
+            "password":"REGISTRY_TOKEN",
+            "email":"REGISTRY_EMAIL",
+            "auth":"BASE_64_BASIC_AUTH_CREDENTIALS"
+       }
+   }
 }
 
     create <BASE_64_BASIC_AUTH_CREDENTIALS> from the command

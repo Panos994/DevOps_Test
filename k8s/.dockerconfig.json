@@ -1,0 +1,10 @@
+{
+    "auths": {
+        "https://ghcr.io":{
+            "username":"Panos994",
+            "password":"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",
+            "email":"it2021154@hua.gr",
+            "auth":"Z2hwX0JZR3JlRjNtUW9LSlNRRlUwZHpyaXJ6ZFY4VVZYUTM1M1MwbQ=="
+       }
+   }
+}
