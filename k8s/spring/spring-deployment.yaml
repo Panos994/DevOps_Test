@@ -39,7 +39,7 @@ spec:
             limits:
               cpu: 1000m
               memory: 512Mi
-          #env:
+              #env:
               # - name: SPRING_DATASOURCE_URL
               #    value: jdbc:postgresql://postgres:5432/dsdb
               #  - name: SPRING_DATASOURCE_USERNAME
