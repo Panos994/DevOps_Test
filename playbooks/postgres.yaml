@@ -56,9 +56,9 @@
 
     - name: "Create db user"
       postgresql_user:
-          state: present
-          name: "{{ db.user }}"
-          password: "{{ db.password }}"
+        state: present
+        name: "{{ db.user }}"
+        password: "{{ db.password }}"
       become: yes
       become_user: postgres
 
@@ -98,5 +98,3 @@
   handlers:
     - name: restart postgres
       service: name=postgresql state=restarted
-
-
