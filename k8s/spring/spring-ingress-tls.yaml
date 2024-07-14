@@ -24,3 +24,6 @@ spec:
     - hosts:
         - panos-spring.ddns.net
       secretName: spring-production-certificate
+
+        #I have to create through NO.IP a new host for panos-spring.ddns.net
+      #https://www.noip.com/

@@ -20,7 +20,7 @@ services:
       - 'dslabdb:/var/lib/postgresql/data/'
   spring:
     image: sp
-#    image: ghcr.io/vasileioskokki/ds-spring:1.0
+    #    image: ghcr.io/vasileioskokki/ds-spring:1.0
     build:
       context: .
       dockerfile: nonroot.Dockerfile
@@ -54,4 +54,4 @@ services:
 
 
 volumes:
-    dslabdb:
+  dslabdb:

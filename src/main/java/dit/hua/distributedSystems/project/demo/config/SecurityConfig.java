@@ -50,9 +50,9 @@ public class SecurityConfig {
 //                .setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PUT", "OPTIONS", "PATCH", "DELETE"));
 //        corsConfiguration.setAllowCredentials(true);
 //        corsConfiguration.setExposedHeaders(List.of("Authorization"));
-          corsConfiguration.setAllowedOrigins(Arrays.asList("*"));
-          corsConfiguration.setAllowedMethods(Arrays.asList("*"));
-          corsConfiguration.setAllowedHeaders(Arrays.asList("*"));
+        corsConfiguration.setAllowedOrigins(Arrays.asList("*"));
+        corsConfiguration.setAllowedMethods(Arrays.asList("*"));
+        corsConfiguration.setAllowedHeaders(Arrays.asList("*"));
 
         http
                 .csrf(csrf -> csrf.disable())
