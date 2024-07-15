@@ -1,6 +1,6 @@
 # Project set up
 * create an inventory file (e.g. hosts or hosts.yaml) that holds the remote hosts that ansible will handle.
-* Example entry is
+* Example entry is:
 ```yaml
 webserver: # <-- group
   hosts: # <-- List of hosts in group
